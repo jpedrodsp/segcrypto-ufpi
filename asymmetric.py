@@ -26,7 +26,7 @@ if __name__ == "__main__":
     ctime, ctext = crypt(b"Hello, World!", publickey)
     dtime, dtext = decrypt(ctext, privatekey)
     
-    print("Crypt elapsed time: {}".format(ctime.microseconds))
+    print("Crypt elapsed time: {} microseconds".format(ctime.microseconds))
     print("Crypt result: {}".format(ctext))
-    print("Decrypt check elapsed time: {}".format(dtime.microseconds))
+    print("Decrypt check elapsed time: {} microseconds".format(dtime.microseconds))
     print("Decrypt result: {}".format(dtext))
