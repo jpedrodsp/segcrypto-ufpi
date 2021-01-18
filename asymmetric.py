@@ -20,10 +20,10 @@ def decrypt(text: bytes, privatekey):
 
 if __name__ == "__main__":
     print("Testing...")
-    privatekey = RSA.importKey(utils.read_rsa_privatekey())
-    publickey = RSA.importKey(utils.read_rsa_publickey())
+    privatekey = utils.read_rsa_privatekey()
+    publickey = utils.read_rsa_publickey()
 
     ctime, ctext = crypt(b"Hello, World!", publickey)
     dtime, dtext = decrypt(ctext, privatekey)
-    #print(ctime.microseconds, ctext)
-    #print(dtime.microseconds, dtext)
+    print(ctime.microseconds, ctext)
+    print(dtime.microseconds, dtext)

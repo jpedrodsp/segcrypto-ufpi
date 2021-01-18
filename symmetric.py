@@ -20,9 +20,9 @@ def decrypt(text: bytes, aeskey):
 
 if __name__ == "__main__":
     print("Testing...")
-    aeskey = AES.AESCipher(utils.read_aes_key())
-    strcontent = bytes(utils.read_textcontent()[:128], "utf-8")
+    aeskey = utils.read_aes_key()
+    strcontent = utils.read_textcontent()
     ctime, ctext = crypt(strcontent, aeskey)
     dtime, dtext = decrypt(ctext, aeskey)
-    #print(ctime.microseconds, ctext)
-    #print(dtime.microseconds, dtext)
+    print(ctime.microseconds, ctext)
+    print(dtime.microseconds, dtext)

@@ -24,5 +24,5 @@ if __name__ == "__main__":
     text = b"hello, world"
     htime, htext = hashtext(text)    
     ctime, cvalue = checkhash(text, htext)
-    #print(htime.microseconds, htext)
-    #print(ctime.microseconds, cvalue)
+    print(htime.microseconds, htext)
+    print(ctime.microseconds, cvalue)
