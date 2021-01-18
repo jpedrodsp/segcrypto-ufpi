@@ -24,5 +24,8 @@ if __name__ == "__main__":
     strcontent = utils.read_textcontent()
     ctime, ctext = crypt(strcontent, aeskey)
     dtime, dtext = decrypt(ctext, aeskey)
-    print(ctime.microseconds, ctext)
-    print(dtime.microseconds, dtext)
+    
+    print("Crypt elapsed time: {}".format(ctime.microseconds))
+    print("Crypt result: {}".format(ctext))
+    print("Decrypt check elapsed time: {}".format(dtime.microseconds))
+    print("Decrypt result: {}".format(dtext))

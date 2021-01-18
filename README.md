@@ -1,5 +1,25 @@
 # Data
 
+## Quickstart (Windows)
+```powershell
+choco install -y python # (optional, using Chocolatey)
+pip install -r requirements.txt
+python .\test.py # full test
+python .\asymmetric.py # simple RSA test
+python .\symmetric.py # simple AES test
+python .\hashcalc.py # simple MD5 test
+``` 
+
+## Quickstart (Linux, Ubuntu)
+```bash
+sudo apt install -y python3 python3-pip # installs Python3 interpreter and package manager
+sudo pip3 install -r requirements.txt # makes pip packages available to entire system
+python3 ./test.py # full test
+python3 ./asymmetric.py # simple RSA test
+python3 ./symmetric.py # simple AES test
+python3 ./hashcalc.py # simple MD5 test
+``` 
+
 ## Content
 
 It's provided a example content with size of `128 bytes`. This is a restriction of `hashlib` `md5` library. It's filepath is in: `data/content.txt`
